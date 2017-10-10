@@ -69,6 +69,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio.hbs', {
+    pageTitle: 'Our Portfolio'
+    portfolioMessage: 'We help companies develops quality application by employing testing at all possible level'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'bad request'
